@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="timKiem" type="text" onkeydown="banPhim(event)" onfocus="reset()">
+<button onclick="dich()">Tìm Kiếm</button>
+<h4 id="result"></h4>
+<script>
+    let tiengAnh = [
+        "button","age","live","computer","water",
+    ]
+    let tiengViet = [
+        "nútBấm","tuổi","trựcTiếp","máyTính","nước"
+    ]
+
+
+    function reset(){
+        document.getElementById("timKiem").value=""
+        document.getElementById("result").innerHTML=""
+    }
+    function banPhim(event){
+       if(event.keyCode===13){
+           dich()
+       }
+    }
+
+    function dich() {
+        let duLieu = document.getElementById("timKiem").value;
+        let vitri = -1
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (duLieu === tiengAnh[i]){
+                vitri = i;
+            }
+        }
+        if (vitri === -1){
+            document.getElementById("result").innerHTML="Khong co ket qua"
+        }else {
+            document.getElementById("result").innerHTML=tiengViet[vitri]
+        }
+    }
+
+</script>
+</body>
+</html>

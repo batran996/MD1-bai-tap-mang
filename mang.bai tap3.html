@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" type="text">
+<button onclick="check()">result</button>
+
+<script>
+function check() {
+    let hoa = "QWERTYUIOPLKJHGFDSAZXCVBNM";
+    let thuong = "qwertyuioplkjhgfdsazxcvbnm";
+    let taoMang = [];
+    let chu = document.getElementById("nhap").value;
+    for (let i = 0;i <chu.length;i++){
+        if (hoa.indexOf(chu[i])=== -1){
+            taoMang.push(chu[i].toUpperCase())
+        }else if (thuong.indexOf(chu[i])=== -1) {
+            taoMang.push(chu[i]).toLocaleString()
+        }else {
+            taoMang.push(chu[i])
+        }
+    }
+    document.write(taoMang.join(""))
+}
+
+</script>
+</body>
+</html>
