@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [12,2,3,44,52,16,17,38,99];
+    let mang1 = [];
+    let mang2 = [...mang];
+    /*for (let i = 0; i < mang.length; i++) {
+        for (let j = i; j <mang.length; j++) {
+            if(mang[i] < mang[j]){
+                let temp = mang[j];
+                mang[j] = mang[i];
+                mang[i] = temp;
+            }
+        }
+    }
+    document.writeln(mang)
+     */
+
+    while (mang.length > 0){
+        let max = mang[0];
+        let viTri = 0
+        for (let i = 0; i < mang.length ; i++) {
+            if (mang[i]>max){
+                max = mang[i];
+                viTri = i;
+            }
+        }
+
+        mang.splice(viTri,1);
+        mang1.push(max);
+    }
+    document.writeln(mang2 + ";" +"<br>")
+    document.writeln(mang1 + ";")
+
+</script>
+</body>
+</html>

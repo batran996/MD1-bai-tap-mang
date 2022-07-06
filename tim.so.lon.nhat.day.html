@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [12,2,3,44,52,16,17,38,99,];
+    let mang1 = [];
+    let max = mang[0];
+    let stt = 0;
+    for (let i = 0; i <mang.length ; i++) {
+        if (mang[i]>max){
+            max = mang[i]
+            stt = i+1;
+        }else {
+            max = max;
+        }
+    }document.write("so lon nhat la" + max +"<br>");
+    document.write(" o vi tri" + stt)
+</script>
+</body>
+</html>
